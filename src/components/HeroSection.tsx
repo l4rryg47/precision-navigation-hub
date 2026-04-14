@@ -1,6 +1,7 @@
 import heroImg from "@/assets/hero-drilling.jpg";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield } from "lucide-react";
+import { motion } from "framer-motion";
 
 const HeroSection = () => (
   <section id="home" className="relative min-h-[90vh] flex items-center overflow-hidden">
@@ -14,11 +15,21 @@ const HeroSection = () => (
     <div className="absolute inset-0" style={{ background: "var(--hero-overlay)" }} />
 
     <div className="container relative z-10 mx-auto px-4 py-32">
-      <div className="max-w-2xl space-y-6">
-        <div className="inline-flex items-center gap-2 rounded-full bg-accent/20 px-4 py-1.5 text-sm font-medium text-accent">
+      <motion.div
+        className="max-w-2xl space-y-6"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <motion.div
+          className="inline-flex items-center gap-2 rounded-full bg-accent/20 px-4 py-1.5 text-sm font-medium text-accent"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
           <Shield className="w-4 h-4" />
           Industry-Leading Precision
-        </div>
+        </motion.div>
 
         <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-tight">
           Drilling &amp; Hydraulic{" "}
@@ -31,7 +42,12 @@ const HeroSection = () => (
           unmatched accuracy and safety across global operations.
         </p>
 
-        <div className="flex flex-wrap gap-4 pt-2">
+        <motion.div
+          className="flex flex-wrap gap-4 pt-2"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
           <Button
             size="lg"
             className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold text-base px-8"
@@ -50,8 +66,8 @@ const HeroSection = () => (
           >
             <a href="#contact">Contact Us</a>
           </Button>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   </section>
 );
