@@ -2,12 +2,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, MapPin, Phone } from "lucide-react";
+import AnimatedSection from "./AnimatedSection";
 
 const ContactSection = () => (
   <section id="contact" className="py-20 lg:py-28 bg-background">
     <div className="container mx-auto px-4">
       <div className="grid lg:grid-cols-2 gap-16">
-        <div>
+        <AnimatedSection>
           <p className="text-sm font-semibold uppercase tracking-widest text-accent mb-2">Get In Touch</p>
           <h2 className="font-heading text-3xl lg:text-4xl font-bold text-foreground mb-6">
             Ready to Start Your Next Project?
@@ -31,27 +32,29 @@ const ContactSection = () => (
               </div>
             ))}
           </div>
-        </div>
+        </AnimatedSection>
 
-        <form
-          className="rounded-xl bg-card shadow-card p-8 space-y-5"
-          onSubmit={(e) => e.preventDefault()}
-        >
-          <div className="grid sm:grid-cols-2 gap-4">
-            <Input placeholder="Full Name" className="bg-muted/50" />
-            <Input placeholder="Company" className="bg-muted/50" />
-          </div>
-          <Input placeholder="Email Address" type="email" className="bg-muted/50" />
-          <Input placeholder="Phone Number" type="tel" className="bg-muted/50" />
-          <Textarea placeholder="Tell us about your project..." rows={4} className="bg-muted/50" />
-          <Button
-            type="submit"
-            size="lg"
-            className="w-full bg-accent text-accent-foreground hover:bg-accent/90 font-semibold"
+        <AnimatedSection delay={0.15}>
+          <form
+            className="rounded-xl bg-card shadow-card p-8 space-y-5"
+            onSubmit={(e) => e.preventDefault()}
           >
-            Send Inquiry
-          </Button>
-        </form>
+            <div className="grid sm:grid-cols-2 gap-4">
+              <Input placeholder="Full Name" className="bg-muted/50" />
+              <Input placeholder="Company" className="bg-muted/50" />
+            </div>
+            <Input placeholder="Email Address" type="email" className="bg-muted/50" />
+            <Input placeholder="Phone Number" type="tel" className="bg-muted/50" />
+            <Textarea placeholder="Tell us about your project..." rows={4} className="bg-muted/50" />
+            <Button
+              type="submit"
+              size="lg"
+              className="w-full bg-accent text-accent-foreground hover:bg-accent/90 font-semibold"
+            >
+              Send Inquiry
+            </Button>
+          </form>
+        </AnimatedSection>
       </div>
     </div>
   </section>

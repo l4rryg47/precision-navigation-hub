@@ -2,6 +2,8 @@ import mwdImg from "@/assets/mwd-equipment.jpg";
 import controlImg from "@/assets/control-room.jpg";
 import motorImg from "@/assets/hydraulic-motor.jpg";
 import { Compass, Monitor, Wrench, ChevronRight } from "lucide-react";
+import AnimatedSection from "./AnimatedSection";
+import { motion } from "framer-motion";
 
 const services = [
   {
@@ -27,7 +29,7 @@ const services = [
 const ServicesSection = () => (
   <section id="services" className="py-20 lg:py-28 bg-background">
     <div className="container mx-auto px-4">
-      <div className="text-center max-w-2xl mx-auto mb-16">
+      <AnimatedSection className="text-center max-w-2xl mx-auto mb-16">
         <p className="text-sm font-semibold uppercase tracking-widest text-accent mb-2">What We Do</p>
         <h2 className="font-heading text-3xl lg:text-4xl font-bold text-foreground">
           Specialist Drilling Services
@@ -35,13 +37,17 @@ const ServicesSection = () => (
         <p className="mt-4 text-muted-foreground leading-relaxed">
           Comprehensive solutions from wellbore planning to execution, powered by cutting-edge technology.
         </p>
-      </div>
+      </AnimatedSection>
 
       <div className="grid md:grid-cols-3 gap-8">
-        {services.map((s) => (
-          <div
+        {services.map((s, i) => (
+          <motion.div
             key={s.title}
             className="group rounded-xl overflow-hidden bg-card shadow-card hover:shadow-card-hover transition-shadow duration-300"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5, delay: i * 0.15 }}
           >
             <div className="h-48 overflow-hidden">
               <img
@@ -66,7 +72,7 @@ const ServicesSection = () => (
                 Learn More <ChevronRight className="w-4 h-4 ml-1" />
               </a>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
