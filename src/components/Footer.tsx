@@ -3,7 +3,7 @@ const Footer = () => (
     <div className="container mx-auto px-4">
       <div className="flex flex-col md:flex-row items-center justify-between gap-6">
         <a href="#home" className="font-heading text-xl font-bold text-primary-foreground tracking-tight">
-          APEX<span className="text-accent">NAV</span>
+          DRILL<span className="text-accent">NAV</span>
         </a>
         <div className="flex gap-6">
           {["Home", "Services", "About", "Contact"].map((l) => (
