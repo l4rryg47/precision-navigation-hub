@@ -15,17 +15,20 @@
     --popover: 0 0% 100%;
     --popover-foreground: 220 30% 10%;
 
-    --primary: 220 60% 20%;
-    --primary-foreground: 40 100% 97%;
+    --primary: 232 70% 22%;
+    --primary-foreground: 220 30% 98%;
 
-    --secondary: 220 15% 92%;
-    --secondary-foreground: 220 30% 15%;
+    --secondary: 220 12% 90%;
+    --secondary-foreground: 232 70% 18%;
 
-    --muted: 220 15% 94%;
-    --muted-foreground: 220 10% 45%;
+    --muted: 220 14% 94%;
+    --muted-foreground: 220 10% 42%;
 
-    --accent: 35 95% 55%;
-    --accent-foreground: 220 60% 10%;
+    --accent: 232 85% 52%;
+    --accent-foreground: 0 0% 100%;
+
+    --steel: 220 8% 55%;
+    --steel-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -36,11 +39,13 @@
 
     --radius: 0.5rem;
 
-    --hero-overlay: linear-gradient(135deg, hsla(220, 60%, 10%, 0.85), hsla(220, 40%, 20%, 0.7));
-    --gradient-accent: linear-gradient(135deg, hsl(35, 95%, 55%), hsl(25, 100%, 50%));
-    --gradient-dark: linear-gradient(180deg, hsl(220, 60%, 10%), hsl(220, 40%, 18%));
-    --shadow-card: 0 4px 24px -4px hsla(220, 60%, 10%, 0.08);
-    --shadow-card-hover: 0 12px 40px -8px hsla(220, 60%, 10%, 0.15);
+    --hero-overlay: linear-gradient(135deg, hsla(232, 70%, 8%, 0.92), hsla(232, 60%, 18%, 0.75));
+    --gradient-accent: linear-gradient(135deg, hsl(232, 85%, 55%), hsl(220, 90%, 45%));
+    --gradient-dark: linear-gradient(180deg, hsl(232, 70%, 10%), hsl(232, 50%, 18%));
+    --gradient-steel: linear-gradient(135deg, hsl(220, 8%, 55%), hsl(220, 10%, 38%));
+    --shadow-card: 0 4px 24px -4px hsla(232, 70%, 10%, 0.1);
+    --shadow-card-hover: 0 16px 48px -8px hsla(232, 85%, 25%, 0.25);
+    --shadow-glow: 0 0 40px hsla(232, 85%, 52%, 0.35);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -77,6 +82,14 @@
 
   .bg-gradient-dark {
     background: var(--gradient-dark);
+  }
+
+  .bg-gradient-steel {
+    background: var(--gradient-steel);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
   }
 
   .shadow-card {

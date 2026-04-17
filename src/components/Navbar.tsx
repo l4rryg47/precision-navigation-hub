@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/drillsync-logo.png";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -15,8 +16,12 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-md border-b border-primary-foreground/10">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
-        <a href="#home" className="font-heading text-xl font-bold text-primary-foreground tracking-tight">
-          DRILL<span className="text-accent">SYNC</span>
+        <a href="#home" className="flex items-center gap-2">
+          <img src={logo} alt="DrillSync Systems logo" className="h-10 w-10 object-contain bg-primary-foreground rounded-md p-1" />
+          <span className="font-heading text-lg font-bold text-primary-foreground tracking-tight leading-none">
+            DRILL<span className="text-accent">SYNC</span>
+            <span className="block text-[10px] font-medium tracking-[0.2em] text-primary-foreground/60">SYSTEMS</span>
+          </span>
         </a>
 
         {/* Desktop */}
