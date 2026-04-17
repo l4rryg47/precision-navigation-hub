@@ -21,7 +21,7 @@ const ContactSection = () => (
           <div className="space-y-5">
             {[
               { icon: Phone, text: "+1 (713) 555-0192" },
-              { icon: Mail, text: "info@apexnav.com" },
+              { icon: Mail, text: "info@drillsyncsystems.com" },
               { icon: MapPin, text: "Houston, TX — Aberdeen, UK — Dubai, UAE" },
             ].map((item) => (
               <div key={item.text} className="flex items-center gap-4">
