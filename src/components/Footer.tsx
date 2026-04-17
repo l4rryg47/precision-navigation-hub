@@ -7,7 +7,7 @@ const Footer = () => (
         <a href="#home" className="flex items-center gap-2">
           <img src={logo} alt="DrillSync Systems logo" className="h-10 w-10 object-contain bg-primary-foreground rounded-md p-1" />
           <span className="font-heading text-lg font-bold text-primary-foreground tracking-tight leading-none">
-            DRILL<span className="text-accent">SYNC</span>
+            DRILL <span className="text-accent">SYNC</span>
             <span className="block text-[10px] font-medium tracking-[0.2em] text-primary-foreground/60">SYSTEMS</span>
           </span>
         </a>
@@ -23,7 +23,7 @@ const Footer = () => (
           ))}
         </div>
         <p className="text-xs text-primary-foreground/40">
-          &copy; {new Date().getFullYear()} DrillSync Systems. All rights reserved.
+          &copy; {new Date().getFullYear()} Drill Sync Systems. All rights reserved.
         </p>
       </div>
     </div>

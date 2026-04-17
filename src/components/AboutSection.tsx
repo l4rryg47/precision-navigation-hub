@@ -19,7 +19,7 @@ const AboutSection = () => (
             Engineering Excellence Below the Surface
           </h2>
           <p className="text-muted-foreground leading-relaxed mb-6">
-            With over two decades of field expertise, ApexNav delivers integrated drilling and
+            With over two decades of field expertise, Drill Sync Systems delivers integrated drilling and
             hydraulic navigation solutions to the oil &amp; gas, geothermal, and mining industries.
             Our commitment to safety, precision, and innovation sets us apart.
           </p>
@@ -43,7 +43,7 @@ const AboutSection = () => (
         <AnimatedSection delay={0.2}>
           <div className="rounded-2xl overflow-hidden shadow-card bg-gradient-dark p-10 lg:p-14">
             <blockquote className="text-primary-foreground/90 text-lg italic leading-relaxed">
-              "ApexNav's directional drilling team delivered pinpoint accuracy on our most
+              "Drill Sync Systems' directional drilling team delivered pinpoint accuracy on our most
               challenging offshore well — on time and under budget."
             </blockquote>
             <p className="mt-6 text-sm font-semibold text-accent">— Senior VP Operations, Major E&P Company</p>
