@@ -14,13 +14,13 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-foreground/95 backdrop-blur-md border-b border-primary-foreground/10">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/10">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
         <a href="#home" className="flex items-center gap-2">
-          <img src={logo} alt="Drill Sync Systems logo" className="h-10 w-10 object-contain" />
-          <span className="font-heading text-lg font-bold text-primary-foreground tracking-tight leading-none">
+          <img src={logo} alt="Drill Sync Systems logo" className="h-12 w-12 object-contain" />
+          <span className="font-heading text-lg font-bold text-foreground tracking-tight leading-none">
             DRILL <span className="text-accent">SYNC</span>
-            <span className="block text-[10px] font-medium tracking-[0.2em] text-primary-foreground/60">SYSTEMS</span>
+            <span className="block text-[10px] font-medium tracking-[0.2em] text-foreground/60">SYSTEMS</span>
           </span>
         </a>
 
@@ -30,7 +30,7 @@ const Navbar = () => {
             <a
               key={l.href}
               href={l.href}
-              className="text-sm font-medium text-primary-foreground/70 hover:text-accent transition-colors"
+              className="text-sm font-medium text-foreground/70 hover:text-accent transition-colors"
             >
               {l.label}
             </a>
@@ -50,7 +50,7 @@ const Navbar = () => {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden text-primary-foreground"
+          className="md:hidden text-foreground"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -60,13 +60,13 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-foreground border-t border-primary-foreground/10 px-4 pb-4">
+        <div className="md:hidden bg-background border-t border-border/10 px-4 pb-4">
           {navLinks.map((l) => (
             <a
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="block py-3 text-sm font-medium text-primary-foreground/70 hover:text-accent transition-colors"
+              className="block py-3 text-sm font-medium text-foreground/70 hover:text-accent transition-colors"
             >
               {l.label}
             </a>
