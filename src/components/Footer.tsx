@@ -5,11 +5,8 @@ const Footer = () => (
     <div className="container mx-auto px-4">
       <div className="flex flex-col md:flex-row items-center justify-between gap-6">
         <a href="#home" className="flex items-center gap-2">
-          <img src={logo} alt="DrillSync Systems logo" className="h-10 w-10 object-contain bg-primary-foreground rounded-md p-1" />
-          <span className="font-heading text-lg font-bold text-primary-foreground tracking-tight leading-none">
-            DRILL <span className="text-accent">SYNC</span>
-            <span className="block text-[10px] font-medium tracking-[0.2em] text-primary-foreground/60">SYSTEMS</span>
-          </span>
+          <img src={logo} alt="Drill Sync Systems logo" className="h-12 w-12 object-contain bg-primary-foreground rounded-md p-1" />
+          <span className="sr-only">Drill Sync Systems</span>
         </a>
         <div className="flex gap-6">
           {["Home", "Services", "About", "Contact"].map((l) => (
