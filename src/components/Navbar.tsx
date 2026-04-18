@@ -14,7 +14,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-md border-b border-primary-foreground/10">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-foreground/95 backdrop-blur-md border-b border-primary-foreground/10">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
         <a href="#home" className="flex items-center gap-2">
           <img src={logo} alt="Drill Sync Systems logo" className="h-10 w-10 object-contain" />
@@ -60,7 +60,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-primary border-t border-primary-foreground/10 px-4 pb-4">
+        <div className="md:hidden bg-foreground border-t border-primary-foreground/10 px-4 pb-4">
           {navLinks.map((l) => (
             <a
               key={l.href}
